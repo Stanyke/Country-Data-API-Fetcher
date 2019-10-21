@@ -13,16 +13,34 @@ Development Test
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="style.css" />
 
 <body>
-    <h1 id="ddd">Country</h1>
-	<div class="form-group">
-		<input type="text" class="form-control" id="country">
+    <div class="container">
+		<div class="form-group">
+			<input type="text" class="form-control" value="Nigeria" id="country">
+		</div>
+		<div class="col-md-6">
+			<button onClick="getCountry()" country_search="country_search">Search Country</button>
+		</div>
+		
+		<div id="errorLoad">
+	
+		</div>
 	</div>
-	<button onClick="getCountry()" class="btn btn-primary">Submit</button>
+	
     <ul id="details">
 
     </ul>
+	
+	
+	<div class="container" id="getAllCountries">
+		<center onClick="getAllToBeClicked()" id="getAllToBeClicked">Get All Countries</center>
+		<div id="countriesGotten">
+		
+		</div>
+	</div>
 </body>
 
 <script src="script.js"></script>
