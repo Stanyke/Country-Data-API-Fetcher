@@ -2,7 +2,7 @@ Index.html, This is where users can input their desired country's name and get s
 
 Script.js, This is the file that does all the work needed to be done, collecting data for the user from https://restcountries.eu/rest/v2/name/{name} whereas the {name} should be replaced with any country of your choice.
 
-Also in the recent update i added a div element with value "Get All Countries" when clicked it get all countries available.
+Also in the recent update i added a div element with value "Get All Countries", thou it's not a button but when clicked on it get all countries available according to their names.
 
 Feel free to reach out to me, enchance to your satisfaction.
 Happy coding...
