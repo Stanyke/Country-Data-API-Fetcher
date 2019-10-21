@@ -4,5 +4,7 @@ Script.js, This is the file that does all the work needed to be done, collecting
 
 Also in the recent update i added a div element with value "Get All Countries", thou it's not a button but when clicked on it get all countries available according to their names.
 
+NB: Remember to click on "Get All Countries" to get all countries.
+
 Feel free to reach out to me, enchance to your satisfaction.
 Happy coding...
