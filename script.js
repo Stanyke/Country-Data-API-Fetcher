@@ -1,4 +1,5 @@
-// var ddd = document.getElementById('ddd').addEventListener('click', loadREST);
+// Get Inputted Country
+
 var details = document.getElementById('details');
 var countryInputted = document.getElementById('country');
 var errorLoad = document.getElementById('errorLoad');
@@ -25,7 +26,8 @@ function getCountry()
 			let html = '';
 			
 			
-			data.forEach(function(dat){
+			data.forEach(function(dat)
+			{
 				html += `
 				
 				<div class='container'>
@@ -71,47 +73,43 @@ function getCountry()
 
 
 
-
+// Get All Countries
 
 var gottenCountries = document.getElementById('countriesGotten');
 
 
 getAllToBeClicked = () =>
 {
-	
 	fetch('https://restcountries.eu/rest/v2/all')
 	.then(function(response)
-		{
-			console.log(response);
+	{
+		console.log(response);
 			
-			return response.json();
-		})
-		.then(function(data){
-			console.log(data);
-			
-			let html = '';
-			
-			
-			data.forEach(function(dat){
-				html += `
-				
-					<table class='table table-dark table-hover'>
-				
-						<tbody>
-							<tr>
-								<td>${dat.name}</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-
-			`;
-			});
-			gottenCountries.innerHTML = html;
-		})
+		return response.json();
+	})
+	.then(function(data)
+	{
+		console.log(data);
 		
-		.catch(function(error)
+		let html = '';
+		
+		data.forEach(function(dat)
 		{
-			errorLoad.innerHTML = error;
-		})
-	}
+			html += `
+				<table class='table table-dark table-hover'>
+					<tbody>
+						<tr>
+							<td>${dat.name}</td>
+						</tr>
+					</tbody>
+				</table>
+			`;
+		});
+		
+		gottenCountries.innerHTML = html;
+	})
+	.catch(function(error)
+	{
+		errorLoad.innerHTML = error;
+	})
+}
