@@ -1,0 +1,42 @@
+body
+{
+	background-image: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+}
+
+#country, #details
+{
+	margin-top: 40px;
+}
+
+[country_search=country_search]
+{
+	transition: 2s;
+	background: #29323c;
+	color: #fff;
+	border-radius: 30px;
+	width: 200px;
+}
+
+[country_search=country_search]:hover
+{
+	transition: 2s;
+	width: 600px;
+	background: #DC2424;
+	color: #fff;
+	border-radius: 30px;
+}
+
+#getAllToBeClicked
+{
+	transition: 2s;
+	font-size:20px;
+	color: #fff;
+}
+
+#getAllToBeClicked:hover
+{
+	transition: 2s;
+	font-size:40px;
+	background: #29323c;
+	color: #fff;
+}
