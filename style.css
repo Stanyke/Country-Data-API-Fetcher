@@ -26,6 +26,13 @@ body
 	border-radius: 30px;
 }
 
+#errorLoad
+{
+	color: #fff;
+	font-size: 30px;
+}
+
+
 #getAllToBeClicked
 {
 	transition: 2s;
