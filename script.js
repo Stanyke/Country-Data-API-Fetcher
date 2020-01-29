@@ -20,7 +20,8 @@ function getCountry()
 			
 			return response.json();
 		})
-		.then(function(data){
+		.then(function(data)
+		{
 			console.log(data);
 			
 			let html = `<div class='container'>
@@ -70,7 +71,7 @@ function getCountry()
 		
 		.catch(function(error)
 		{
-			errorLoad.innerHTML = error;
+			errorLoad.innerHTML = "Not Found";
 		})
 	}
 }
