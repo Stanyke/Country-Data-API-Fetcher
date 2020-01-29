@@ -23,43 +23,48 @@ function getCountry()
 		.then(function(data){
 			console.log(data);
 			
-			let html = '';
+			let html = `<div class='container'>
+							<div class="table-responsive">
+								<table class='table table-dark table-hover'>
+									<thead>
+										<tr>
+											<th>Country</th>
+											<th>Capital</th>
+											<th>Region</th>
+											<th>Populations</th>
+											<th>Timezone</th>
+											<th>Currrency Code</th>
+											<th>Currrency Name</th>
+											<th>Currrency Symbol</th>
+											<th>Languages</th>
+											<th>Calling Codes</th>
+										</tr>
+									</thead>
+								
+									<tbody>`;
 			
 			
 			data.forEach(function(dat)
 			{
-				html += `
-				
-				<div class='container'>
-					<table class='table table-dark table-hover'>
-						<thead>
-							<tr>
-								<th>Country</th>
-								<th>Region</th>
-								<th>Populations</th>
-								<th>Timezone</th>
-								<th>Currrency</th>
-								<th>Languages</th>
-								<th>Calling Codes</th>
-							</tr>
-						</thead>
-					
-						<tbody>
-							<tr>
-								<td>${dat.name}</td>
-								<td>${dat.region}</td>
-								<td>${dat.population}</td>
-								<td>${dat.timezones}</td>
-								<td>${dat.currencies}</td>
-								<td>${dat.languages}</td>
-								<td>${dat.callingCodes}</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-
-			`;
+				html += `<tr>
+							<td>${dat.name}</td>
+							<td>${dat.capital}</td>
+							<td>${dat.region}</td>
+							<td>${dat.population}</td>
+							<td>${dat.timezones}</td>
+							<td>${dat.currencies[0].code}</td>
+							<td>${dat.currencies[0].name}</td>
+							<td>${dat.currencies[0].symbol}</td>
+							<td>${dat.languages[0].name}</td>
+							<td>${dat.callingCodes}</td>
+						</tr>`;
 			});
+
+			html += `</tbody>
+				</table>
+			</div>
+		</div>`
+
 			details.innerHTML = html;
 		})
 		
@@ -91,20 +96,22 @@ getAllToBeClicked = () =>
 	{
 		console.log(data);
 		
-		let html = '';
+		let html = `<div class='container'>
+						<div class="table-responsive">
+							<table class='table table-dark table-hover'>
+								<tbody>`;
 		
 		data.forEach(function(dat)
 		{
-			html += `
-				<table class='table table-dark table-hover'>
-					<tbody>
-						<tr>
-							<td>${dat.name}</td>
-						</tr>
-					</tbody>
-				</table>
-			`;
+			html += `<tr>
+						<td>${dat.name}</td>
+					</tr>`;
 		});
+
+		html += `</tbody>
+			</table>
+		</div>
+	</div>`
 		
 		gottenCountries.innerHTML = html;
 	})
